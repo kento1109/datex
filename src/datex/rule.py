@@ -9,7 +9,6 @@ allow_keys = 'の'  # 「先週の金曜」のように間に許容する文字�
 
 re_date_ptns_dict = dict()
 
-
 def duration_expansion(ptn: str, duration_keys: str) -> str:
     """
     正規表現のパターンを拡張する

@@ -1,11 +1,13 @@
-import re
+import os
 import unicodedata
 
-from rule import compile_rules
-from rule import re_date_ptns_dict
+from .rule import re_date_ptns_dict, compile_rules
+
+
+DIR_NAME = os.path.dirname(__file__)
+compile_rules(os.path.join(DIR_NAME, 'keys'))
 
 ksuji_table = str.maketrans('一二三四五六七八九〇十', '12345678901')
-
 
 def text_normalize(text: str) -> str:
     """
